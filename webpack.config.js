@@ -5,6 +5,5 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve("./dist"),
-    clean: true,
   },
 };
