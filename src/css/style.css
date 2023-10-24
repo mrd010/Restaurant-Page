@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500;700;900&display=swap");
 
+/* font-family: 'Lora', serif; */
 /* font-family: 'Playfair Display', serif; */
 /* font-family: 'Roboto', sans-serif; */
 
@@ -131,23 +132,96 @@ body {
 }
 
 .main-main {
-  padding: 40vw 1rem 1rem;
-  font-family: "Playfair Display", serif;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.main-intro {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.5rem;
+  padding-top: 40vw;
 
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
-.main-intro .main-intro-desc {
+.main-main p[class$="desc"] {
+  line-height: 1.4rem;
+  font-size: 1rem;
   text-indent: 1rem;
+  text-align: justify;
+  font-family: "Lora", serif;
+  padding: 2rem;
+}
+
+.main-main .main-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-main section:nth-child(even) {
+  background-color: var(--theme-dark);
+  color: #fefefe;
+}
+
+.main-main .main-section:nth-child(odd) h2 {
+  background-color: rgba(50, 20, 20, 0.2);
+}
+
+.main-main .main-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(50, 20, 20, 0.6);
+  padding: 1rem 0;
+  position: sticky;
+  top: 4rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin: 2rem 1rem 0;
+}
+
+.main-main .main-comments {
+  padding: 1rem;
+}
+
+.main-main .main-comments h2 {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 50px;
+  background-color: #fefefe;
+  color: var(--theme-dark);
+  width: max-content;
+}
+
+.main-main .main-comments h2 strong {
+  border-radius: 20px;
+  background-color: var(--theme-dark);
+  color: #fefefe;
+  padding: 0.2rem 1rem 0.2rem 0.8rem;
+  text-align: center;
+}
+
+.main-main .main-comments ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-main .main-comments .comment {
+  border-radius: 20px;
+  background-color: #fefefe;
+  color: var(--theme-dark);
+  font-family: "Lora", serif;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  text-indent: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-main .main-comments .comment .reviewer {
+  background-color: var(--theme-dark);
+  border-radius: 20px;
+  color: #fefefe;
+  align-self: flex-end;
+  padding: 4px 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
 }
