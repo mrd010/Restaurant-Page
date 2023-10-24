@@ -7,6 +7,9 @@
 :root {
   --theme-light: #e25c40;
   --theme-dark: #a22922;
+
+  --light: #fcfae7;
+  --dark: #222;
 }
 
 @font-face {
@@ -48,7 +51,7 @@ body {
   position: relative;
 }
 
-.main-header-nav {
+nav[class$="-header-nav"] {
   width: 100%;
   background-color: var(--theme-dark);
   border-radius: 10px;
@@ -58,15 +61,15 @@ body {
   z-index: 10;
 }
 
-.main-header-nav div {
+nav[class$="-header-nav"] div {
   width: 100%;
   color: #222;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.main-header-nav a {
-  background-color: #fefefe;
+nav[class$="-header-nav"] a {
+  background-color: var(--light);
   text-align: center;
   color: var(--theme-dark);
   font-weight: 500;
@@ -77,19 +80,19 @@ body {
   display: block;
 }
 
-.main-header-nav a:hover,
-.main-header-nav a:focus {
-  background-color: #ffd3d1;
+nav[class$="-header-nav"] a:active {
+  box-shadow: 0 0 5px var(--theme-dark) inset;
 }
 
-.main-header-nav a.active {
+nav[class$="-header-nav"] a.active {
   background-color: #752e2b;
   color: #fefefe;
-  border-bottom: 2px solid #fefefe;
+  border-bottom: 2px solid var(--light);
 }
 
-.main-header-nav a:not(:last-child):not(.active) {
-  border-right: 2px solid var(--theme-dark);
+nav[class$="-header-nav"]
+  a:not(:last-child):not(.active):not(.no-right-border) {
+  border: 2px solid var(--theme-dark);
 }
 
 .main-header-header {
@@ -183,7 +186,7 @@ body {
   margin-bottom: 2rem;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   border-radius: 50px;
-  background-color: #fefefe;
+  background-color: var(--light);
   color: var(--theme-dark);
   width: max-content;
 }
@@ -204,7 +207,7 @@ body {
 
 .main-main .main-comments .comment {
   border-radius: 20px;
-  background-color: #fefefe;
+  background-color: var(--light);
   color: var(--theme-dark);
   font-family: "Lora", serif;
   padding: 1rem;
@@ -224,4 +227,94 @@ body {
   padding: 4px 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+}
+
+/* menu page */
+div#content {
+  background: linear-gradient(to bottom, #fcfae7, transparent);
+}
+.menu-header {
+  width: 100%;
+}
+
+.menu-header .menu-header-header {
+  padding-top: 3rem;
+
+  display: grid;
+}
+
+.menu-header-header .menu-header-logo {
+  width: 80%;
+  margin: auto;
+}
+
+.menu-nav-category-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.menu-nav-category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-nav-category-nav .category-link {
+  border: 2px solid var(--theme-dark);
+  color: var(--theme-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.menu-nav-category-nav .category-link:active {
+  background-color: var(--theme-dark);
+  color: #fefefe;
+}
+
+.menu-main {
+  color: #222;
+  padding: 1rem;
+}
+
+.menu-main .menu-main-category {
+}
+
+.menu-main .menu-main-category .menu-main-category-title {
+  font-size: 2.4rem;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.menu-main .menu-main-category .menu-main-category-content {
+}
+
+.menu-main-category-content .food-card {
+  border-radius: 10px;
+  border: 8px solid #222;
+  background-color: #222;
+}
+
+.menu-main-category-content .food-card figure {
+}
+
+.menu-main-category-content .food-card figure img {
+  border-radius: 8px;
+}
+
+.menu-main-category-content .food-card figure .food-card-title {
+  text-align: center;
+  background-color: #222;
+  color: #fefefe;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  border-top: 8px solid #222;
 }
