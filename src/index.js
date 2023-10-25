@@ -1,4 +1,5 @@
 import createMainPage from "./scripts/loaderMain.js";
+import createMenuPage from "./scripts/loaderMenu.js";
 
 function loadMainPage() {
   const oldContent = document.querySelector("#content");
@@ -8,7 +9,13 @@ function loadMainPage() {
   addEventListeners();
 }
 
-function loadMenuPage() {}
+function loadMenuPage() {
+  const oldContent = document.querySelector("#content");
+  const newContent = createMenuPage();
+  oldContent.remove();
+  document.body.append(newContent);
+  addEventListeners();
+}
 
 function loadContactPage() {}
 
