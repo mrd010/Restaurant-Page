@@ -1,19 +1,16 @@
-export function createLink(linkClass = null, href = "#", textContent) {
-  const link = document.createElement("a");
-  if (linkClass) {
-    link.classList.add(linkClass);
-  }
-  link.setAttribute("href", href);
-  link.textContent = textContent;
-
-  return link;
+export function appendChildren(element, children) {
+  children.forEach((child) => element.appendChild(child));
 }
 
-export function createElement(elementTag, elementClass = null) {
+export function createElement(elementTag, elementClass, ...attributes) {
   const element = document.createElement(elementTag);
   if (elementClass) {
     element.classList.add(elementClass);
   }
+
+  attributes.forEach((attribute) => {
+    element.setAttribute(attribute[0], attribute[1]);
+  });
 
   return element;
 }
