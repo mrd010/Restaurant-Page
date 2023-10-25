@@ -1,3 +1,4 @@
+import createContactPage from "./scripts/loaderContact.js";
 import createMainPage from "./scripts/loaderMain.js";
 import createMenuPage from "./scripts/loaderMenu.js";
 
@@ -17,7 +18,13 @@ function loadMenuPage() {
   addEventListeners();
 }
 
-function loadContactPage() {}
+function loadContactPage() {
+  const oldContent = document.querySelector("#content");
+  const newContent = createContactPage();
+  oldContent.remove();
+  document.body.append(newContent);
+  addEventListeners();
+}
 
 function addEventListeners() {
   const menuLinks = document.querySelectorAll('nav[class$="header-nav"] a');
