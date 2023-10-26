@@ -6,8 +6,8 @@ module.exports = {
     filename: "main.js",
     path: path.resolve("./dist"),
   },
-  devtool: "inline-source-map",
-  mode: "development",
+  devtool: "source-map",
+  mode: "production",
   module: {
     rules: [
       {
