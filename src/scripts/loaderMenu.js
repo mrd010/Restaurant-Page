@@ -1,5 +1,5 @@
 import { createElement, appendChildren } from "./ElementCreator.js";
-import menuLogo from "../img/menu2.png";
+import menuLogo from "../../dist/img/menu2.png";
 
 export default function createMenuPage() {
   const categories = ["Starters", "Side Dishes", "Main Course", "Deserts"];
@@ -89,7 +89,7 @@ export default function createMenuPage() {
       const foodCard = createElement("div", "food-card");
       const figure = createElement("figure");
       const img = createElement("img", "food-card-img", ["alt", foodName]);
-      img.src = `../src/img/foods/${foodImg}`;
+      img.src = `../../dist/img/foods/${foodImg}`;
       const figCaption = createElement("figcaption", "food-card-title");
       figCaption.textContent = foodName;
       appendChildren(figure, [img, figCaption]);

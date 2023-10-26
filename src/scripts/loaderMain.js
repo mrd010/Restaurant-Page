@@ -1,8 +1,8 @@
 import { createElement, appendChildren } from "./ElementCreator.js";
-import logo from "../img/fox_logo.png";
-import mainSectionImage1 from "../img/main_section_1.jpg";
-import mainSectionImage2 from "../img/main_section_2.jpg";
-import cafeSectionImage from "../img/cafe_section.jpg";
+import logo from "../../dist/img/fox_logo.png";
+import mainSectionImage1 from "../../dist/img/main_section_1.jpg";
+import mainSectionImage2 from "../../dist/img/main_section_2.jpg";
+import cafeSectionImage from "../../dist/img/cafe_section.jpg";
 
 export default function createMainPage() {
   const contentContainer = createElement("div", undefined, ["id", "content"]);
