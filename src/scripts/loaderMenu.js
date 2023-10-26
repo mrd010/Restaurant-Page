@@ -89,7 +89,7 @@ export default function createMenuPage() {
       const foodCard = createElement("div", "food-card");
       const figure = createElement("figure");
       const img = createElement("img", "food-card-img", ["alt", foodName]);
-      img.src = `../../dist/img/foods/${foodImg}`;
+      img.src = `./img/foods/${foodImg}`;
       const figCaption = createElement("figcaption", "food-card-title");
       figCaption.textContent = foodName;
       appendChildren(figure, [img, figCaption]);
